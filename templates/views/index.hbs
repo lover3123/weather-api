@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Daily weather advisor</p>
+          <h1>{{title}}</h1>
+        </div>
+        <button class="location-button" type="button">Use current location</button>
+      </header>
+
+      <section class="control-panel" aria-label="Weather search controls">
+        <form class="weather-search">
+          <label class="field city-field">
+            <span>City</span>
+            <input class="city-input" placeholder="Enter city name" type="text" value="Kolkata" />
+          </label>
+          <button class="search-button" type="submit">Check weather</button>
+        </form>
+
+        <div class="preference-grid">
+          <label class="field">
+            <span>Body weight (kg)</span>
+            <input class="weight-input" min="30" max="200" step="1" type="number" value="70" />
+          </label>
+
+          <label class="field">
+            <span>Activity</span>
+            <select class="activity-input">
+              <option value="low">Low</option>
+              <option value="moderate">Moderate</option>
+              <option value="high">High</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Outside time</span>
+            <select class="outdoor-input">
+              <option value="0">Mostly indoors</option>
+              <option value="0.5">30 minutes</option>
+              <option value="1">1 hour</option>
+              <option value="2">2 hours</option>
+              <option value="3">3+ hours</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <p class="status-message" aria-live="polite"></p>
+
+      <section class="dashboard" aria-label="Weather results">
+        <article class="weather-card main-weather">
+          <div>
+            <p class="card-label">Current weather</p>
+            <h2 class="place">Loading...</h2>
+            <p class="date"></p>
+          </div>
+
+          <div class="weather-visual">
+            <img class="weather-icon" alt="" />
+            <div>
+              <p class="temperature"><span>--</span><sup>&deg;C</sup></p>
+              <p class="weather-condition">Waiting for weather data</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="weather-card hydration-card">
+          <p class="card-label">Hydration</p>
+          <h2 class="hydration-liters">-- L</h2>
+          <p class="hydration-message">Your estimate appears after weather loads.</p>
+          <p class="advice-note">Estimate for healthy adults. Adjust for medical needs.</p>
+          <ul class="hydration-factors"></ul>
+        </article>
+
+        <article class="weather-card clothing-card">
+          <p class="card-label">Clothing</p>
+          <h2 class="clothing-summary">--</h2>
+          <ul class="clothing-items"></ul>
+        </article>
+
+        <article class="metric-card">
+          <span>Feels like</span>
+          <strong class="feels-like">--&deg;C</strong>
+        </article>
+
+        <article class="metric-card">
+          <span>Humidity</span>
+          <strong class="humidity">--%</strong>
+        </article>
+
+        <article class="metric-card">
+          <span>Wind</span>
+          <strong class="wind-speed">-- km/h</strong>
+        </article>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

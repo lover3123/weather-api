@@ -1,25 +1,17 @@
 {
-  "name": "node-js-and-express-app-",
+  "name": "weather-app-using-node-and-express",
   "version": "1.0.0",
-  "description": "",
-  "main": "my-express-app/mynodeserver.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node my-express-app/mynodeserver.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lover3123/NODE-JS-AND-EXPRESS-APP-.git"
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/lover3123/NODE-JS-AND-EXPRESS-APP-/issues"
-  },
-  "homepage": "https://github.com/lover3123/NODE-JS-AND-EXPRESS-APP-#readme",
+  "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "hbs": "^4.2.1",
+    "nodemon": "^3.1.14"
   }
 }
